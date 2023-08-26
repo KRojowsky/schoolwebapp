@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link href="{% static "css/widget.css" %}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+    <title>SchoolWeb | Stwórz z nami najlepszą platformę edukacyjną</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="bordered-image">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" />
+            </a>
+        </div>
+        <div class="container">
+          <h2 class="title">
+              <span class="title-word title-word-1">School</span>
+              <span class="title-word title-word-2">Web</span>
+          </h2>
+        </div>
+        <div class="hamburger-menu">
+          <div class="bar" style="color: black;"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#faq1" class="nav-option">O SchoolWeb</a></li>
+          <li><a href="#faq2" class="nav-option">Korepetycje</a></li>
+          <li><a href="#faq3" class="nav-option">Ceny</a></li>
+          <li><a href="#faq4" class="nav-option">Korepetytorzy</a></li>
+          <li><a href="#faq5" class="nav-option">Rezerwacje</a></li>
+          <li><a href="{% url 'lessons-home' %}" class="b1 hvr-bounce-in" style="background-color: #E6D1F2; padding:7px 15px; border-radius:7px;">Korepetycje</a></li> <!-- New button -->
+          <li><a href="{% url 'dashboard' %}" class="hvr-bounce-in" style="background-color: #E6D1F2; padding:7px 15px; border-radius:7px;">Strefa nauki</a></li> <!-- New button -->
+        </ul>
+      </div>
+    </nav>
+
+    <section>
+      <div id = "faq1" class="faq-logo">
+        <h1>FAQ - najczęściej zadawane pytania i odpowiedzi</h1>
+      </div>
+      <h2 class="faq-title">O SchoolWeb</h2>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Czym jest SchoolWeb?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            W SchoolWeb przyszłość korepetycji nabiera nowego wymiaru.
+            Naszym celem jest odkrycie pełnego potencjału uczniów,
+            redefiniując tradycyjne korepetycje dzięki zaawansowanym
+            rozwiązaniom online. Tworzymy interaktywne i innowacyjne
+            środowisko edukacyjne, dostarczając pasjonujące lekcje
+            prowadzone przez wykwalifikowanych nauczycieli.
+            W SchoolWeb uczniowie doświadczają wspaniałej nauki,
+            rozwijają się i osiągają sukcesy w przystępny i nowoczesny sposób.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Dla kogo przeznaczone jest SchoolWeb?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            SchoolWeb oferuje wsparcie edukacyjne dla uczniów szkół oraz
+            osób w każdym wieku, umożliwiając wykorzystanie pełni ich
+            potencjału poprzez spersonalizowane lekcje online i zaawansowane
+            technologie.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Nasi korepetytorzy</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            W SchoolWeb korepetytorzy to oddani specjaliści, ekspert w swoich
+            dziedzinach. Przechodzą dokładną kontrolę jakości przed
+            rozpoczęciem zajęć, aby zapewnić najwyższy standard nauczania.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div id = "faq2" class="question">
+          <h3>Jakie usługi oferuje SchoolWeb?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Oferujemy interaktywną platformę edukacyjną SchoolWeb
+            zapewniającą dostęp do innowacyjnych korepetycji,
+            forum do zadawania pytań, platformę korepetytorską, na której odbywają się zajęcia,
+            dodatkowo jest to miejsce, w którym można kontakować z korepetytorem oraz
+            przechowywać notatki, aby uprościć i ulepszyć proces nauki uczniów.
+          </p>
+        </div>
+      </div>
+
+
+      <h2 class="faq-title">Korepetycje</h2>
+      <div class="faq">
+        <div class="question">
+          <h3>Jak działają korepetycje online</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Korepetycje online to wirtualne spotkania ucznia i korepetytora,
+            gdzie komunikują się za pomocą transmisji w czasie rzeczywistym.
+            Dzięki temu mogą się widzieć, słyszeć i wspólnie pracować nad nauką,
+            niezależnie od swojego położenia geograficznego. To wygodna forma nauki
+            na odległość, umożliwiająca efektywną interakcję i współpracę między
+            uczniem a nauczycielem.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Czego potrzebuję, aby uczestniczyć w zajęciach</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+           Aby brać udział w korepetycjach, wystarczy, że będziesz miał działający
+            mikrofon, który pozwoli na rozmowę z korepetytorem. Kamera nie jest
+            obowiązkowa - najważniejsze, żebyście mogli się wzajemnie słyszeć i
+            komunikować podczas zajęć.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>W jaki sposób mogę się umówić na zajęcia?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Zapraszamy na naszą stronę główną, gdzie masz możliwość
+            zapisania się na darmową lekcję próbną! Możesz wybrać dowolny
+            przedmiot oraz termin, który Ci odpowiada. Skorzystaj z tej okazji,
+            aby poznać naszą platformę i doświadczyć profesjonalnych korepetycji.
+            Serdecznie zachęcamy do zapoznania się z naszą ofertą i rejestracji na
+            lekcję próbną już teraz!
+          </p>
+        </div>
+      </div>
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Jak długo trwają zajęcia?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Czas trwania jednej lekcji wynosi 50 minut.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div id = "faq3" class="question">
+          <h3>Zalety korepetycji online</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Korepetycje online mają wiele zalet, takich jak: dostępność niezależnie
+            od odległości, elastyczność czasowa, wsparcie technologiczne,
+            indywidualne podejście do ucznia, większy wybór korepetytorów,
+            interaktywne środowisko edukacyjne, oszczędność czasu i kosztów,
+            przygotowanie do przyszłościowego świata.
+          </p>
+        </div>
+      </div>
+
+
+
+
+
+
+      <h2 class="faq-title">Ceny</h2>
+      <div class="faq">
+        <div class="question">
+          <h3>Ile kosztują prywatne korepetycje?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Zapewniamy korzystne ceny korepetycji, w zakresie od 35 zł do
+            50 zł (za pojedyncze zajęcia), dostosowane do różnych typów członkostwa.
+            Naszym priorytetem jest stworzenie idealnej oferty, która spełni
+            potrzeby każdego ucznia. Więcej szczegółów i informacji można
+            znaleźć na naszej stronie. Zapraszamy do zapoznania się z
+            naszą ofertą!
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Metody płatności</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Przyjmujemy płatności za pośrednictwem przelewu na podany numer
+            lub bezpośrednio na nasze konto. Dzięki temu zapewniamy prosty
+            i bezpieczny proces płatności dla naszych klientów. Jeśli masz
+            jakiekolwiek pytania dotyczące płatności lub potrzebujesz
+            informacji o numerze konta, służymy pomocą i zachęcamy do kontaktu.
+            Twoja wygoda i bezpieczeństwo są dla nas najważniejsze.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div id = "faq4" class="question">
+          <h3>Kiedy i w jaki sposób mogę anulować korepetycje?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Zapraszamy na naszą stronę główną, gdzie masz możliwość
+            zapisania się na darmową lekcję próbną! Możesz wybrać dowolny
+            przedmiot oraz termin, który Ci odpowiada. Skorzystaj z tej okazji,
+            aby poznać naszą platformę i doświadczyć profesjonalnych korepetycji.
+            Serdecznie zachęcamy do zapoznania się z naszą ofertą i rejestracji na
+            lekcję próbną już teraz!
+          </p>
+        </div>
+      </div>
+
+
+
+
+
+      <h2 class="faq-title">Dla korepetytorów</h2>
+      <div class="faq">
+        <div class="question">
+          <h3>Czym jest SchoolWeb?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Aby uczestniczyć w korepetycjach 1 na 1, wymagane jest ukończenie
+            18 lat oraz posiadanie profesjonalnych umiejętności dydaktycznych.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Dla kogo przeznaczone jest SchoolWeb?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            SchoolWeb oferuje wsparcie edukacyjne dla uczniów szkół oraz
+            osób w każdym wieku, umożliwiając wykorzystanie pełni ich
+            potencjału poprzez spersonalizowane lekcje online i zaawansowane
+            technologie.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Nasi korepetytorzy</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            W SchoolWeb korepetytorzy to oddani specjaliści, ekspert w swoich
+            dziedzinach. Przechodzą dokładną kontrolę jakości przed
+            rozpoczęciem zajęć, aby zapewnić najwyższy standard nauczania.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div id = "faq5" class="question">
+          <h3>Jak długo trwają zajęcia?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Czas trwania jednej lekcji wynosi 50 minut.
+          </p>
+        </div>
+      </div>
+
+
+
+
+      <h2 class="faq-title">Rezerwacje</h2>
+      <div class="faq">
+        <div class="question">
+          <h3>Jak zapisać się na zajęcia do korepetytora?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Aby uczestniczyć w korepetycjach 1 na 1, wymagane jest ukończenie
+            18 lat oraz posiadanie profesjonalnych umiejętności dydaktycznych.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Jak dostać się na moje zajęcia?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            SchoolWeb oferuje wsparcie edukacyjne dla uczniów szkół oraz
+            osób w każdym wieku, umożliwiając wykorzystanie pełni ich
+            potencjału poprzez spersonalizowane lekcje online i zaawansowane
+            technologie.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Jak sprawdzić ile zajęć zostało do wykorzystania?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            W SchoolWeb korepetytorzy to oddani specjaliści, ekspert w swoich
+            dziedzinach. Przechodzą dokładną kontrolę jakości przed
+            rozpoczęciem zajęć, aby zapewnić najwyższy standard nauczania.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Jak skontaktować się z korepetytorem?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Czas trwania jednej lekcji wynosi 50 minut.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="faq">
+        <div class="question">
+          <h3>Jak odwołać lub zmienić termin zajęć?</h3>
+          <svg width="18" height="13" viewBox="0 0 42 25">
+            <path
+                    d="M3 3L21 21L39 3"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Czas trwania jednej lekcji wynosi 50 minut.
+          </p>
+        </div>
+      </div>
+    </section>
+  <script src="{% static 'js/faq.js' %}"></script>
+
+  <script>
+		// JavaScript for responsive navigation
+		const hamburgerMenu = document.querySelector('.hamburger-menu');
+		const navLinks = document.querySelector('.nav-links');
+
+		hamburgerMenu.addEventListener('click', () => {
+		  navLinks.classList.toggle('show');
+		});
+  	</script>
+
+  </body>
+</html>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background-image: linear-gradient(to right ,#e49bfa, #ffffff, #e49bfa);
+    font-family: 'Montserrat';
+  }
+
+  nav {
+    z-index:1;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 3px 0px #bb00ff;
+  }
+
+  .nav-container {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  section {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:50px;
+  }
+
+  .faq-logo{
+    margin-top: 125px;
+    padding: 10px 15px;
+    border-bottom: 1px solid;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight:900;
+  }
+
+  .faq-title{
+    font-size: 1.85rem;
+    margin: .1rem 0rem;
+    margin-top: 75px;
+  }
+
+  .faq{
+    max-width: 900px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border: 1px solid;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 7px;
+    color: #000000;
+  }
+
+  .question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 870px;
+  }
+
+  .question h3 {
+    font-size: 1.1rem;
+  }
+
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.5s ease;
+  }
+
+  .answer p {
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .faq.active .answer {
+    max-height: 300px;
+    animation: fade 0.7s ease-in-out
+  }
+
+  .faq.active svg {
+    transform: rotate(180deg);
+  }
+
+  svg{
+    transition: transform 0.5s ease-in;
+  }
+
+  @keyframes fade{
+    from{
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @media only screen and (max-width: 967px) {
+    .faq {
+      width: 110%; /* Adjust the width as needed */
+    }
+
+    .question {
+      min-width: unset;
+    }
+
+    svg {
+      width: 18px; /* Adjust the size of the arrow icon as needed */
+      height: 13px; /* Adjust the size of the arrow icon as needed */
+    }
+  }
+</style>

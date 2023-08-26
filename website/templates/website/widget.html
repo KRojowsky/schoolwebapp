@@ -1,0 +1,387 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset = "utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href="{% static "css/widget.css" %}" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<title>SchoolWeb | Twórz najlepszą platformę edukacyjną</title>
+</head>
+
+<body>
+<nav>
+  <div class="nav-container">
+	<div class="bordered-image">
+		<a href="#hero">
+	  		<img src="{% static 'img/logo.png' %}" />
+		</a>
+	</div>
+    <div class="container">
+	  <h2 class="title">
+		  <span class="title-word title-word-1">School</span>
+		  <span class="title-word title-word-2">Web</span>
+	  </h2>
+	</div>
+    <div class="hamburger-menu">
+      <div class="bar" style="color: black;"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#heroes" class="nav-option">O nas</a></li>
+      <li><a href="#pricing" class="nav-option">Ceny</a></li>
+      <li><a href="#testimonial" class="nav-option">Opinie</a></li>
+      <li><a href="{% url 'applyTeacher' %}" class="nav-option">Zostań korepetytorem</a></li>
+      <li><a href="#contact" class="nav-option">Kontakt</a></li>
+      <li><a href="{% url 'lessons-home' %}" class="b1 hvr-bounce-in" style="background-color: #E6D1F2; padding:7px 15px; border-radius:7px;">Korepetycje</a></li> <!-- New button -->
+      <li><a href="{% url 'dashboard' %}" class="hvr-bounce-in" style="background-color: #E6D1F2; padding:7px 15px; border-radius:7px;">Strefa nauki</a></li> <!-- New button -->
+    </ul>
+  </div>
+</nav>
+
+	<section id = "hero" class="hero">
+		<h1 class="hero-heading">Stwórz z nami
+		<span style="color: #bb00ff;">najlepszą platformę edukacyjną</span></h1>
+
+		<div class="container">
+			<p class="hero-subtitle"><span style="color: #bb00ff;">✔</span> Indywidualne oraz grupowe zajęcia od 35zł.
+				<br><span style="color: #bb00ff;">✔</span> Sprawdzeni oraz kopetentni korepetytorzy.
+				<br><span style="color: #bb00ff;">✔</span> Darmowe materiały edukacyjne.
+				<br><span style="color: #bb00ff;">✔</span> Szybki kontakt z administracją platformy.
+				<br><span style="color: #bb00ff;">✔</span> Kontakt z korepetytorami po godzinach.
+				<br><span style="color: #bb00ff;">✔</span> Nieograniczony dostęp do forum edukacyjnego.
+				<br>
+				<a href="{% url 'applyStudent' %}" class="hvr-buzz-out">✔ Umów pierwsze zajęcia</a>
+			</p>
+			<div class="hero-image">
+				<img src="{% static 'img/students.png' %}" alt="Image description">
+			</div>
+		</div>
+	</section>
+
+	<div id = "heroes" class="heroes">
+
+		<section class="hero-zero">
+		  <div class="container-zero">
+			<div class="hero-image-zero">
+			  <img src="{% static 'img/sw_logo.png' %}" alt="Image description">
+			</div>
+			<div class="hero-label-zero">
+			  <h1 class="hero-heading-zero">O platformie<span style="color: #bb00ff;"> Schoolweb</span></h1>
+			  <p class="hero-text-zero"> Schoolweb to wyjątkowa platforma edukacyjna,
+				  która zapewnia nie tylko <span style="font-weight:950;color:#bb00ff;">konkurencyjne cenowo lekcje</span>,
+				  lecz także szereg innych narzędzi. Nasza misja polega na dostarczaniu najwyższej jakości nauczania,
+				  dlatego każdy nasz korepetytor jest starannie przetestowany i posiada bogatą wiedzę oraz umiejętności.
+				  Jednak Schoolweb to nie tylko lekcje. Nasza platforma oferuje również rozbudowane narzędzia, które pomagają uczniom
+				  w ich nauce. Posiadamy <span style="font-weight:950;color:#bb00ff;">dynamiczne forum</span>,
+				  gdzie uczniowie mogą zadawać pytania i uzyskiwać odpowiedzi od innych użytkowników. To miejsce,
+				  w którym wzajemnie pomagamy sobie, dzieląc się wiedzą i doświadczeniem. Jesteśmy świadomi, że nauka
+				  nie kończy się o ustalonych godzinach zajęć. Dlatego oferujemy
+				  <span style="font-weight:950;color:#bb00ff;">wsparcie uczniom poza zajęciami</span>, aby zapewnić kompleksową opiekę edukacyjną.
+				  Dla nas liczy się sukces ucznia na każdym etapie nauki. <span style="font-weight:950;color:#bb00ff;">Wybierając Schoolweb, masz pewność, że
+				  otrzymujesz najlepsze lekcje, doświadczonych korepetytorów i niezastąpione wsparcie edukacyjne</span>.
+				  Nasza platforma jest stworzona z myślą o Twoim sukcesie i dostarcza wszystko, czego potrzebujesz,
+				  aby osiągnąć swoje cele edukacyjne.
+			</div>
+		  </div>
+		</section>
+
+		<section class="hero-first">
+		  <div class="container-first">
+			<div class="hero-label-first">
+			  <h1 class="hero-heading-first">Nasi<span style="color: #bb00ff;"> korepetytorzy</span></h1>
+			  <p class="hero-text-first">Korepetytorzy SchoolWeb posiadają bogate
+				  doświadczenie w nauczaniu i są zaangażowani w sukces edukacyjny naszych uczniów.
+				  Dzięki indywidualnemu podejściu do każdego ucznia, nasi korepetytorzy
+				  potrafią <span style="font-weight:950;color:#bb00ff;">dostosować program nauczania do indywidualnych potrzeb i stylu
+					  nauki</span>. Są w stanie wyjaśnić trudne koncepcje w sposób klarowny i
+				  zrozumiały, co przyczynia się do osiągania znaczących postępów. Wszyscy
+				  nasi korepetytorzy są starannie wybierani i przeszli przez <span style="font-weight:950;color:#bb00ff;">rozbudowany
+				  proces selekcji</span>, aby zapewnić wysoką jakość nauki.</p>
+			</div>
+			<div class="hero-image-first">
+			  <img src="{% static 'img/teacher.jpg' %}" alt="Image description">
+			</div>
+		  </div>
+		</section>
+
+		<section class="hero-second">
+		  <div class="container-second">
+			<div class="hero-image-second">
+			  <img src="{% static 'img/people.jpg' %}" alt="Image description">
+			</div>
+			<div class="hero-label-second">
+			  <h1 class="hero-heading-second">Zajęcia<span style="color: #bb00ff;"> dla każdego</span></h1>
+			  <p class="hero-text-second"> Niezależnie od poziomu zaawansowania,
+				  wieku czy indywidualnych potrzeb, nasza platforma zapewnia różnorodne
+				  zajęcia, które są dostosowane do wymagań każdego ucznia. Wierzymy, że
+				  każdy uczeń ma unikalne umiejętności i styl nauki. Dlatego nasza
+				  platforma oferuje <span style="font-weight:950;color:#bb00ff;">zajęcia rozwijające oraz koordynujące</span> dostarczając przy tym różnorodne materiały, ćwiczenia i metody nauczania,
+				  które pozwalają uczniom rozwijać się w sposób dostosowany do ich
+				  indywidualnych preferencji i potrzeb.</p>
+			</div>
+		  </div>
+		</section>
+
+		<section class="hero-third">
+		  <div class="container-third">
+			<div class="hero-label-third">
+			  <h1 class="hero-heading-third">Początki bywają . . .<span style="color: #bb00ff;"> łatwe!</span></h1>
+			  <p class="hero-text-third">To właśnie na samym początku zaczynamy odkrywać
+				  nową dziedzinę, stawiamy pierwsze kroki i poznajemy jej tajniki. Choć
+				  może się wydawać trudne na pierwszy rzut oka, to właśnie w tych chwilach
+				  kryje się ogromna siła i potencjał do nauki. Nie bój się popełniać
+				  błędów, ponieważ to właśnie przez nie uczymy się najlepiej. Każde
+				  trudności to okazja do nauki, do poszerzania swoich horyzontów i
+				  przekraczania własnych ograniczeń. Pamiętaj, że na naszej platformie
+				  edukacyjnej masz do dyspozycji doświadczonych korepetytorów, którzy będą Cię
+				  wspierać na każdym etapie Twojej edukacji. Bądź ciekawy, podejmuj
+				  wyzwania i pozwól sobie na popełnianie błędów. Początki bywają łatwe,
+				  ale to właśnie od Ciebie zależy, jak daleko zajdziesz w swojej edukacji.
+				  <span style="font-weight:950;color:#bb00ff;">Pamiętaj, że masz ogromny
+				  potencjał i jesteśmy tutaj, aby Ci pomóc go odkryć i rozwijać.</span></p>
+			</div>
+			<div class="hero-image-third">
+			  <img src="{% static 'img/high-five.jpg' %}" alt="Image description">
+			</div>
+		  </div>
+		</section>
+	</div>
+
+	<div id = "pricing" class = "pricing">
+		<br>
+		<div class="pricing-title">
+			<h1><span style="color: #bb00ff;">Cennik</span> zajęć</h1>
+		</div>
+		<div class="pricing-text">
+			Rozwijanie swojej wiedzy i umiejętności to <span style="font-weight:950;color:#bb00ff;">inwestycja w przyszłość</span>.
+			Nasz cennik został stworzony tak, aby zapewnić Ci jak najlepsze wartości
+			edukacyjne i elastyczność w wyborze opcji, które najlepiej odpowiadają
+			Twoim potrzebom. Na SchoolWeb możesz dostosować częstotliwość zajęć oraz
+			ich terminy do własnych potrzeb. Dzięki <span style="font-weight:950;color:#bb00ff;">konkurencyjnym cenom</span> pojedynczych zajęć
+			oraz pakietów, wysoce wykwalfikowanej kadrze korepetytorów
+			oraz wielu rozmiatym funkcjom dostępnych na platformie
+			jesteśmy w stanie zaoferować naszym użytkownikom współpracę
+			na najwyższym poziomie.
+			<br><br>
+			<span style="font-weight:bold;">Jeśli uważasz, że żadna
+			z opcji nie jest dla Ciebie odpowiednia skontaktuj
+			się z nami w celu ustalenia
+			<span style="color: #bb00ff;">indywidualnej formy edukacji</span>.</span>
+		</div>
+		<div class="pricing-table">
+		  <div class="pricing-plan">
+			<div class="content">
+				<h2>Zajęcia indywidualne</h2>
+				<p>50zł / 50minut</p>
+				<ul>
+				  <li>✔ Zajęcia 1:1 z korepetytorem.</li>
+				  <li>✔ Elastyczność doboru terminów zajęć.</li>
+				  <li>✔ Możliwość zmiany terminu / odwołania zajeć na 30
+				  minut przed rozpoczęciem planowych.</li>
+				  <li>✔ Nielimitowany dostęp do wglądu w materiały z zajęć.</li>
+				  <li>✔ Możliwość kontaktu z korepetytorem poza godzinami zajęć.</li>
+				  <li>✔ Zajęcia dostosowane do potrzeb ucznia (koordynujące / rozwijające).</li>
+				  <li>✔ Zajęcia odbywające się na łatwej i przyjemnej w obsłudze
+				  aplikacji komunikacyjnej oraz tablicy wirtualnej.</li>
+				</ul>
+			</div>
+			<div class="pricing-button">
+				<a href="#">Zarezerwuj pierwsze zajęcia</a>
+			</div>
+		  </div>
+		  <div class="pricing-plan">
+			<div class="content">
+				<h2>Zajęcia grupowe</h2>
+				<p>35zł / 50minut</p>
+				<ul>
+				  <li>✔ Zajęcia w 2-4 osobowej grupie o starannie
+				  dobranym poziomie.</li>
+				  <li>✔ Moliwość kontaktu z innym członkami grupy.</li>
+				  <li>✔ Nielimitowany dostęp do wglądu w materiały z zajęć.</li>
+				  <li>✔ Możliwość kontaktu z korepetytorem poza godzinami zajęć.</li>
+				  <li>✔ Zajęcia odbywające się na łatwej i przyjemnej w obsłudze
+				  aplikacji komunikacyjnej oraz tablicy wirtualnej.</li>
+				</ul>
+			</div>
+			<div class="pricing-button">
+				<a href="#">Zarezerwuj pierwsze zajęcia</a>
+			</div>
+		  </div>
+		  <div class="pricing-plan">
+			  <div class="content">
+				<h2>Pakiety</h2>
+				<p>65zł - 180zł</p>
+				<ul>
+				  <li>✔ 2 godziny zajęć indywidualnych tygodniowo - 95zł</li>
+				  <li>✔ 3 godziny zajęć indywidualnych tygodniowo - 140zł</li>
+				  <li>✔ 4 godziny zajęć indywidualnych tygodniowo - 180zł</li>
+				  <li>✔ 2 godziny zajęć grupowych tygodniowo - 65zł</li>
+				  <li>✔ 3 godziny zajęć grupowych tygodniowo - 95zł</li>
+				  <li>✔ 4 godziny zajęć grupowych tygodniowo - 115zł</li>
+				  <br>
+				  <li>Możliwość kupna pakietu na okres: od 1 tygodnia do 3 miesięcy</li>
+				</ul>
+			  </div>
+			  <div class="pricing-button">
+			  	<a href="#">Zarezerwuj pierwsze zajęcia</a>
+			  </div>
+		  </div>
+		</div>
+	</div>
+
+	<section id = "testimonial" class="testimonial-section">
+		<div class="pricing-title">
+				<h1><span style="color: #bb00ff;">Opinie</span> naszych użytkowników</h1>
+		</div>
+		<div class="main-carousel">
+		  <div class="testimonial">
+			  <img src="{% static 'img/opinion1.jpg' %}" alt="User 1">
+			  <p class="testimonial-author">- Agnieszka</p>
+		  </div>
+		  <div class="testimonial">
+			  <img src="{% static 'img/opinion2.jpg' %}" alt="User 1">
+			  <p class="testimonial-author">- Ania</p>
+		  </div>
+		  <div class="testimonial">
+			  <img src="{% static 'img/op.jpg' %}" alt="User 1">
+			  <p class="testimonial-author">- Emilka</p>
+		  </div>
+		  <div class="testimonial">
+			  <img src="{% static 'img/op.jpg' %}" alt="User 1">
+			  <p class="testimonial-author">- Emilka</p>
+		  </div>
+		  <div class="testimonial">
+			  <img src="{% static 'img/op.jpg' %}" alt="User 1">
+			  <p class="testimonial-author">- Emilka</p>
+		  </div>
+		</div>
+	</section>
+
+	<section id="contact" class="contact-section">
+        <div class="contact-title">
+            <h1>Kontakt</h1>
+        </div>
+        <form method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="text" name="phone_number" placeholder="Numer telefonu" required>
+            <textarea name="message" placeholder="Napisz wiadomość . . ." required></textarea>
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
+
+	<footer>
+		<div class="footer-columns">
+			<div class="footer-column">
+			  <h4>Obsługa klienta</h4>
+			  <ul>
+				<li><a href="{% url 'faq' %}">FAQ</a></li>
+			  </ul>
+			  <ul>
+				<li><a href="{% url 'contact-info' %}">Skontaktuj się z nami</a></li>
+			  </ul>
+			</div>
+			<div class="footer-column">
+			  <h4>Dla rodziców</h4>
+
+			</div>
+			<div class="footer-column">
+			  <h4>Zasady prawne</h4>
+
+			</div>
+		</div>
+		<p>&copy; 2023 SchoolWeb. All rights reserved.</p>
+		<h5>Created by <a href="#">Rojowski Projects</a></h5>
+	</footer>
+
+	<style>
+
+		#contact {
+		  width: 100%;
+		  max-width: 1400px;
+  		  margin: 0 auto;
+  		  text-align: center;
+  		  margin-top: 80px;
+		  border-top: 1px solid black;
+		}
+
+		.contact-title {
+		  text-align: center;
+		  text-transform: uppercase;
+		  font-size: 1.7rem;
+		  margin-top: 80px;
+		}
+
+		form input,
+		form textarea,
+		form button {
+		  display: block;
+		  width: 100%;
+		  margin-bottom: 15px;
+		  font-size: 16px;
+		  border: 1px solid #ccc;
+		  border-radius: 5px;
+		  font-family: Montserrat;
+		  padding:10px;
+		  margin-left:-10px;
+		}
+
+		form textarea {
+		  height: 150px;
+		}
+
+		form button {
+		  background-color: #ffffff;
+		  color: #000000;
+		  cursor: pointer;
+		  border: none;
+		  margin: 0 auto;
+		  max-width: 200px;
+		  border: 2px solid #000000;
+		  font-size: 16px;
+		  letter-spacing: .5px;
+		  font-weight: 900;
+		  margin-bottom: 50px;
+		}
+
+		form button:hover {
+		  background-color: #f2f2f2;
+		  transition: .3s;
+		}
+
+		@media (max-width: 1467px) {
+		  #contact{
+			width: 90%;
+		  }
+
+		  .contact-title{
+		  	font-size: 17px;
+		  }
+		}
+	</style>
+
+	<script>
+		// JavaScript for responsive navigation
+		const hamburgerMenu = document.querySelector('.hamburger-menu');
+		const navLinks = document.querySelector('.nav-links');
+
+		hamburgerMenu.addEventListener('click', () => {
+		  navLinks.classList.toggle('show');
+		});
+  	</script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script type="text/javascript">
+	$('.main-carousel').flickity({
+	  cellAlign: 'left',
+	  wrapAround: true,
+	  freeScroll: true
+	});
+	</script>
+</body>
+
+</html>

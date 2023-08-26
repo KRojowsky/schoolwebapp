@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link href="{% static "css/widget.css" %}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+    <title>SchoolWeb | Stwórz z nami najlepszą platformę edukacyjną</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="bordered-image">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" />
+            </a>
+        </div>
+        <div class="container">
+          <h2 class="title">
+              <span class="title-word title-word-1">School</span>
+              <span class="title-word title-word-2">Web</span>
+          </h2>
+        </div>
+        <div class="hamburger-menu">
+          <div class="bar" style="color: black;"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#heroes" class="nav-option">O nas</a></li>
+          <li><a href="#pricing" class="nav-option">Ceny</a></li>
+          <li><a href="#testimonial" class="nav-option">Opinie</a></li>
+          <li><a href="{% url 'applyTeacher' %}" class="nav-option">Zostań korepetytorem</a></li>
+          <li><a href="#contact" class="nav-option">Kontakt</a></li>
+          <li><a href="{% url 'lessons-home' %}" class="b1 hvr-bounce-in" style="background-color: #E6D1F2; padding:7px 15px; border-radius:7px;">Korepetycje</a></li> <!-- New button -->
+          <li><a href="{% url 'dashboard' %}" class="hvr-bounce-in" style="background-color: #E6D1F2; padding:7px 15px; border-radius:7px;">Strefa nauki</a></li> <!-- New button -->
+        </ul>
+      </div>
+    </nav>
+
+    <section>
+    <div class="student_register">
+        <div class="student_logo">
+            <h1>Kontakt</h1>
+        </div>
+        <h4>PYTANIA OGÓLNE</h4>
+        <p>supportsw@schoolweb.pl</p>
+        <h4>APLIKUJ NA STANOWISKO KOREPETYTORA</h4>
+        <p>rekrutacjasw@schoolweb.pl</p>
+        <h4>NUMER KONTAKTOWY</h4>
+        <p>+48572930585</p>
+        <h4>ADRES KORYSPONDENCYJNY</h4>
+        <p>Wielicka 44/94, 30-552 Kraków</p>
+    </div>
+    </section>
+
+  <script>
+    // JavaScript for responsive navigation
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+  </body>
+</html>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background-image: linear-gradient(to right ,#e49bfa, #ffffff, #e49bfa);
+    font-family: 'Montserrat';
+  }
+
+  nav {
+    z-index:1;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 3px 0px #bb00ff;
+  }
+
+  .nav-container {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .student_register {
+      flex: 1;
+      padding: 20px;
+      margin: 20px;
+      width: 90%;
+      max-width: 1400px;
+      border-radius: 12px;
+      background-color: #ffffff;
+      margin-top: 200px;
+      border: 1px solid;
+    }
+
+    .student_logo {
+      text-align: center;
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+
+    .student_register p {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .student_register h4 {
+      margin-top: 20px;
+    }
+
+    @media only screen and (max-width: 867px) {
+      .student_register {
+        margin-top: 200px;
+        width: 90%;
+      }
+
+      .student_logo {
+        font-size: 18px;
+      }
+
+      .student_register p {
+        font-size: 14px;
+      }
+
+      .student_register h4 {
+        font-size: 18px;
+      }
+    }
+
+</style>
